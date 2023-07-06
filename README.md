@@ -54,6 +54,17 @@ npx electron-forge import
 npm run make
 ```
 
+### CSP (Content-Security-Policy)
+
++ [electron-test](https://github.com/morimoto-hiroshi/electron-test)のCSPヘッダに加えて、content-srcの記述が必要。
+
+```
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src http://localhost:3000/"">
+
+```
+
++ [MDN - コンテンツセキュリティポリシー (CSP)](https://developer.mozilla.org/ja/docs/Web/HTTP/CSP)
+
 ## 参考
 
 + [Electron 公式 - クイックスタート](https://www.electronjs.org/ja/docs/latest/tutorial/quick-start)
